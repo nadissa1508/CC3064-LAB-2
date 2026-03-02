@@ -19,17 +19,17 @@ int main() {
             pid3 = fork();
 
             if (pid3 == 0) {  // BISNIETO
-                for(int i = 0; i < 1000000; i++) {
+                for(int i = 0; i < 100000000; i++){
                     printf("Bisnieto: %d\n", i);
                 }
             } else {  // NIETO
-                for(int i = 0; i < 1000000; i++) {
+                for(int i = 0; i < 100000000; i++){
                     printf("Nieto: %d\n", i);
                 }
                 wait(NULL);
             }
         } else {  // HIJO
-            for(int i = 0; i < 1000000; i++) {
+            for(int i = 0; i < 100000000; i++){
                 printf("Hijo: %d\n", i);
             }
             wait(NULL);
