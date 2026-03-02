@@ -9,13 +9,14 @@ int main()
     if (hijo == 0)
     {
         // PROCESO HIJO
-        printf("Hijo: Mi PID es %d, comenzando conteo...\n", getpid());
-        // Conteo MUCHO más largo: 40 millones de iteraciones
-        for (int i = 1; i <= 200000000; i++)
+        printf("Hijo: Mi PID es %d, esperando...\n", getpid());
+        sleep(30); 
+        printf("Hijo: Comenzando conteo...\n");
+        for (int i = 1; i <= 40000000; i++)
         {
             if (i % 100000 == 0)
             {
-                printf("Hijo: %d / 200000000\n", i);
+                printf("Hijo: %d / 40000000\n", i);
             }
         }
         printf("Hijo: Terminé el conteo, finalizando...\n");
